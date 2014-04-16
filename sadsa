@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<!--
+  Created using jsbin.com
+  Source can be edited via http://jsbin.com/yesey/1/edit
+-->
+<head>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/raphael/2.1.0/raphael-min.js"></script>
+
+  <title>JS Bin</title>
+
+<style id="jsbin-css">
+
+</style>
+</head>
+<body>
+
+<script>
+var height=400;
+var width= 400;
+
+var paper= Raphael(0, 0, width,height);
+var Henry=[];
+
+for(var i=0; i<1000; i=i+1){
+ Henry[i]= paper.rect(400/1000*i, 0, 400/1000,2);
+}
+
+for(var f=0;f<1000;f++){
+  Henry[f].animate({x:400/1000*f,y:400-22},10000*Math.random());
+}
+</script>
+</body>
+</html>
